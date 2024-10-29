@@ -6,9 +6,26 @@
     <title>Lich Hen</title>
     <link rel="stylesheet" href="../boostrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/LichHen.css">
 </head>
+<script>
+    function ktradate(){
+        var date = document.getElementById("ngaySuaChua").value;
+        var cur = new Date();
+        var now = new Date(date);
+        var day = now - cur;
+        var finish = Math.ceil(day/(1000 *60*60*24));
+        if (finish > 1)
+        {
+            document.getElementById("helpdate").innerHTML ="*";
+        } else
+            document.getElementById("helpdate").innerHTML ="Ngay dat lich phai sau ngay hien tai";
+    }
+
+</script>
+
 <body>
     <section class="Header justify-content-center align-items-center">
         <div class="container">
@@ -21,11 +38,11 @@
                         <div class="container">
                             <li>
                                 <a class="navbar-brand link-light link-opacity-25 link-opacity-100-hover "
-                                    style="font-size: 16px;" href="../HTML/index.html">Home</a>
+                                    style="font-size: 16px;" href="../HTML/Home.html">Home</a>
                             </li>
                             <li>
                                 <a class="navbar-brand link-light link-opacity-25 link-opacity-100-hover "
-                                    style="font-size: 16px;" href="../HTML/design.html">Design</a>
+                                    style="font-size: 16px;" href="../HTML/Home_design.html">Design</a>
                             </li>
                             <li><a class="navbar-brand link-light link-opacity-25 link-opacity-100-hover"
                                     style="font-size: 16px;" href="../HTML/news.html">News</a>
@@ -83,7 +100,8 @@
     
                 <div class="mb-3">
                     <label for="ngaySuaChua" class="form-label">Chọn ngày Đặt lịch*</label>
-                    <input type="date" id="ngaySuaChua" class="form-control" required>
+                    <input type="date" id="ngaySuaChua" class="form-control" required onblur="ktradate()">
+                    <small id="helpdate" class="form-text text-danger">(*)</small>
                 </div>
     
                 <div class="mb-3">
@@ -97,11 +115,13 @@
                 <div class="mb-3">
                     <label for="hoVaTen" class="form-label">Họ và tên*</label>
                     <input type="text" id="hoVaTen" class="form-control" placeholder="Vui lòng nhập Họ và tên của bạn" required>
+                    <small id="helphvt" class="form-text  text-danger">(*)</small>
                 </div>
     
                 <div class="mb-3">
                     <label for="dienThoai" class="form-label">Điện thoại*</label>
                     <input type="tel" id="dienThoai" class="form-control" required>
+                    <small id="helpsdt" class="form-text  text-danger">(*)</small>
                 </div>
     
                 <div class="mb-3">
@@ -123,10 +143,11 @@
                 <div class="mb-3">
                     <label for="email" class="form-label">Email*</label>
                     <input type="email" id="email" class="form-control" required>
+                    <small id="helpemail" class="form-text text-danger">(*)</small>
                 </div>
     
                 <div class="text-center">
-                    <button type="submit" class="btn btn-danger w-100">GỬI ĐI</button>
+                    <button type="submit" class="btn btn-danger w-100" id="save">GỬI ĐI</button>
                 </div>
             </form>
         </div>

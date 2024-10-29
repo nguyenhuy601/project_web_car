@@ -58,12 +58,64 @@
                         </div>
                     </nav>
                 </div>
-                <div class="col  d-flex flex-row-reverse">
-                    <div class="p-2"><a href="Login.html" target="_blank"><button type="button"
-                        class="btn btn-light">Sign in</button></a>
+                <div class="col d-flex flex-row-reverse Account">
+                    <div id="user-menu" class="p-2">
+                        <a href="../HTML/Login.html"><button type="button" id="sign-in-btn" class="btn btn-light">Sign in</button></a>
+                        <div id="user-profile" style="display: none;">
+                            <img src="path/to/default-avatar.png" alt="Avatar" class="rounded-circle" width="40" height="40">
+                            <span>Tôi <i class="fa fa-caret-down"></i></span>
+                            <div id="dropdown-menu" style="display: none;">
+                                <div class="profile-info">
+                                    <img src="path/to/default-avatar.png" alt="Avatar" class="rounded-circle" width="50" height="50">
+                                    <p>Huy Nguyễn</p>
+                                    <button>Xem hồ sơ</button>
+                                </div>
+                                <hr>
+                                <ul>
+                                    <li>Dùng thử 1 tháng Premium</li>
+                                    <li>Cài đặt và quyền riêng tư</li>
+                                    <li>Trợ giúp</li>
+                                    <li>Ngôn ngữ</li>
+                                    <hr>
+                                    <li>Bài đăng và hoạt động</li>
+                                    <li>Tài khoản đăng tin tuyển dụng</li>
+                                    <li id="logout-btn">Đăng xuất</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    
                 </div>
+                <style>
+                    #user-profile {
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                    }
+                    
+                    .Account #dropdown-menu {
+                        position: absolute;
+                        top: 50px;
+                        right: 0;
+                        width: 200px;
+                        background-color: white;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+                        z-index: 1000;
+                        padding: 10px;
+                    }
+                    
+                    .Account #dropdown-menu ul {
+                        list-style-type: none;
+                        padding: 0;
+                        margin: 0;
+                    }
+                    
+                    .Account #dropdown-menu li {
+                        padding: 10px;
+                        cursor: pointer;
+                    }
+                </style>
             </div>
         </div>
     </section>
@@ -203,8 +255,8 @@
         <div class="row revealUp">
             <div class="col">
                 <div class="row pb-2">
-                    <div class="img col-5 "><img src="../IMG/img_option/lamborghini-autentica-1675750838.jpg" alt="" width="300px"
-                            height="200px" class="imgage rounded mx-auto d-block">
+                    <div class="img col-5 "><img src="../IMG/img_option/lamborghini-autentica-1675750838.jpg" alt=""
+                            width="300px" height="200px" class="imgage rounded mx-auto d-block">
                         <div class="overlay">
                             <div class="text">
                                 <h5 style="color: yellow;">Lamborghini Veneno Roadster</h5> <br>
@@ -214,8 +266,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="img col-5 "><img src="../IMG/img_option/lamborghini-Aventador LP 780-4 Ultimae.jpg" alt=""
-                            width="300px" height="200px" class="imgage rounded mx-auto d-block">
+                    <div class="img col-5 "><img src="../IMG/img_option/lamborghini-Aventador LP 780-4 Ultimae.jpg"
+                            alt="" width="300px" height="200px" class="imgage rounded mx-auto d-block">
                         <div class="overlay">
                             <div class="text">
                                 <h5 style="color: yellow;">Lamborghini Sián FKP 37</h5> <br>
@@ -255,25 +307,26 @@
             </div>
             <div class="col text-light text-end">
                 <h1><span class="text-warning">H&D</span> - Where trust meets quality.</h1>
-                <p> Explore our selection of top-rated vehicles, meticulously chosen by those who demand the best in performance and style.</p>
+                <p> Explore our selection of top-rated vehicles, meticulously chosen by those who demand the best in
+                    performance and style.</p>
                 <script>
                     document.addEventListener("DOMContentLoaded", function () {
                         gsap.registerPlugin(ScrollTrigger);
-                    
-                        gsap.fromTo(".text-end", 
+
+                        gsap.fromTo(".text-end",
                             { x: -200, opacity: 0 },
-                            { 
-                                x: 0, opacity: 1,  
+                            {
+                                x: 0, opacity: 1,
                                 duration: 3,
-                                ease: "power4.out", 
+                                ease: "power4.out",
                                 scrollTrigger: {
                                     trigger: ".text-end",
-                                    start: "top 90%", 
-                                    end: "bottom 20%",  
-                                    toggleActions: "play reverse play reverse",  
-                                    scrub: true, 
-                                    onEnter: () => gsap.to(".text-end", { x: 0, opacity: 1 }),  
-                                    onLeave: () => gsap.to(".text-end", { x: -200, opacity: 0 })  
+                                    start: "top 90%",
+                                    end: "bottom 20%",
+                                    toggleActions: "play reverse play reverse",
+                                    scrub: true,
+                                    onEnter: () => gsap.to(".text-end", { x: 0, opacity: 1 }),
+                                    onLeave: () => gsap.to(".text-end", { x: -200, opacity: 0 })
                                 }
                             });
                     });
@@ -658,6 +711,99 @@
             </div>
         </div>
     </section>
+    <div class="loading-page">
+        <svg id="svg" width="300" height="300" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Outer Circle -->
+            <circle cx="100" cy="100" r="80" stroke="white" stroke-width="2" fill="none" />
+
+            <!-- Inner Circle -->
+            <circle cx="100" cy="100" r="60" stroke="white" stroke-width="2" fill="none" />
+
+            <!-- Diagonal Line -->
+            <line x1="30" y1="170" x2="170" y2="30" stroke="white" stroke-width="1" />
+
+            <!-- Center Circle with H&D -->
+            <circle cx="100" cy="100" r="30" fill="black" />
+            <text x="100" y="106" font-size="18" font-weight="bold" text-anchor="middle" fill="white"
+                font-family="Arial, sans-serif">H&D</text>
+
+            <!-- Text Paths for Curved Text -->
+            <defs>
+                <!-- Define Path for Bottom Text -->
+                <path id="bottomTextPath" d="M 30,100 a 70,70 0 1,1 140,0" />
+                <!-- Define Path for Top Text -->
+                <path id="topTextPath" d="M 30,100 a 70,70 0 1,0 140,0" />
+            </defs>
+
+            <!-- Bottom Curved Text "IF YOU PLAY, YOU MUST HAVE QUALITY" -->
+            <text font-size="5" fill="white" font-weight="normal" letter-spacing="0.5" font-family="Arial, sans-serif">
+                <textPath href="#bottomTextPath" startOffset="2%">
+                    IF YOU PLAY, YOU MUST HAVE QUALITY
+                </textPath>
+            </text>
+
+            <!-- Top Curved Text "GARA" -->
+            <text font-size="5" fill="white" font-weight="normal" letter-spacing="0.5" font-family="Arial, sans-serif">
+                <textPath href="#topTextPath" startOffset="85%">
+                    GARA
+                </textPath>
+            </text>
+        </svg>
+
+        <div class="name-container">
+            <div class="logo-name">H&D</div>
+        </div>
+    </div>
+    <style>
+        .loading-page {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+            justify-content: center;
+            color: #191654;
+        }
+
+        #svg {
+            height: 150px;
+            width: 150px;
+            stroke: white;
+            fill-opacity: 0;
+            stroke-width: 3px;
+            stroke-dasharray: 4500;
+            animation: draw 8s ease;
+        }
+
+        @keyframes draw {
+            0% {
+                stroke-dashoffset: 4500;
+            }
+
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        .name-container {
+            height: 30px;
+            overflow: hidden;
+        }
+
+        .logo-name {
+            color: #fff;
+            font-size: 20px;
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            margin-left: 20px;
+            font-weight: bolder;
+        }
+    </style>
 </body>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -703,14 +849,69 @@
                 }
             });
         });
+        gsap.fromTo(
+            ".loading-page",
+            { opacity: 1 },
+            {
+                opacity: 0,
+                display: "none",
+                duration: 1.5,
+                delay: 3.5,
+            }
+        );
+
+        gsap.fromTo(
+            ".logo-name",
+            {
+                y: 50,
+                opacity: 0,
+            },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 2,
+                delay: 0.5,
+            }
+        );
+
+    });
+    // Ẩn nút Sign In và hiển thị avatar khi đăng nhập thành công
+    function updateUIAfterLogin(user) {
+        document.getElementById('sign-in-btn').style.display = 'none';
+        const userProfile = document.getElementById('user-profile');
+        userProfile.style.display = 'flex';
+        userProfile.querySelector('p').innerText = user.name;
+    }
+
+    // Xử lý hiển thị/ẩn menu khi nhấn vào avatar
+    document.getElementById('user-profile').addEventListener('click', function () {
+        const dropdown = document.getElementById('dropdown-menu');
+        dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
     });
 
+    // Xử lý đăng xuất
+    document.getElementById('logout-btn').addEventListener('click', function () {
+        document.getElementById('user-profile').style.display = 'none';
+        document.getElementById('sign-in-btn').style.display = 'block';
+        alert('Đã đăng xuất.');
+    });
 
+    // Kiểm tra nếu đã đăng nhập và cập nhật giao diện
+    window.onload = function () {
+        const user = JSON.parse(localStorage.getItem('user')); // Lấy thông tin người dùng từ localStorage
+        if (user) {
+            updateUIAfterLogin(user);
+        }
+    };
+    
 </script>
 <script src="../boostrap/js/bootstrap.bundle.min.js"></script>
 <script src="../js/js.js"></script>
 <script src="../js/server.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+    integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </html>

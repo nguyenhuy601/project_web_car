@@ -42,8 +42,8 @@
                                     Store
                                 </button>
                                 <ul class="dropdown-menu bg-secondary-subtle text-secondary-emphasis">
-                                    <li><a class="dropdown-item" href="#">Toyota</a></li>
-                                    <li><a class="dropdown-item" href="#">Mazda</a></li>
+                                    <li><a class="dropdown-item" href="">Toyota</a></li>
+                                    <li><a class="dropdown-item" href="">Mazda</a></li>
                                     <li><a class="dropdown-item" href="#">Nissan</a></li>
                                     <li><a class="dropdown-item" href="#">Lamborghini</a></li>
                                     <li><a class="dropdown-item" href="#">VinFast</a></li>
@@ -1147,6 +1147,7 @@
         var sections = document.querySelectorAll('section[id^="sec_"]');
         sections.forEach(function (section) {
             section.style.display = 'none';
+            
         });
     
         var selectedSection = document.getElementById(secId);
@@ -1164,7 +1165,15 @@
     document.addEventListener('DOMContentLoaded', function () {
         // Đặt các sự kiện cho sticky-menu ở đây
         var stickyMenuItems = document.querySelectorAll('.sticky-menu a');
+        var dropdown_menu = document.querySelectorAll('.dropdown-menu a');
         stickyMenuItems.forEach(function (item) {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                var secId = item.getAttribute('href').replace('#', '');
+                showSection(secId);
+            });
+        });
+        dropdown_menu.forEach(function (item) {
             item.addEventListener('click', function (e) {
                 e.preventDefault();
                 var secId = item.getAttribute('href').replace('#', '');
@@ -1175,5 +1184,4 @@
 
 </script>
 <script src="../boostrap/js/bootstrap.bundle.min.js"></script>
-
 </html>
