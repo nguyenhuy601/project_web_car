@@ -65,10 +65,6 @@ li {
     transition: .3s ease;
 }
 
-.Header a:hover {
-    text-decoration: underline;
-    transform: scale(1.1);
-}
 
 #sec_2 {
     margin-top: 200px;
@@ -165,7 +161,7 @@ li {
     transition: text-decoration-color 300ms;
     position: relative;
     padding: 0.2em 0;
-
+    font-size: 15px;
 }
 
 .Footer a:hover::after,

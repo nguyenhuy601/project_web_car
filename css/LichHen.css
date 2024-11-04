@@ -58,10 +58,7 @@ li {
     transition: .3s ease;
 }
 
-.Header a:hover {
-    text-decoration: underline;
-    transform: scale(1.1);
-}
+
 
 h5 {
     margin-top: 20px;
@@ -118,7 +115,7 @@ input::placeholder {
     transition: text-decoration-color 300ms;
     position: relative;
     padding: 0.2em 0;
-
+    font-size: 15px;
 }
 
 .Footer a:hover::after,

@@ -26,10 +26,7 @@ li {
   transition: .3s ease;
 }
 
-.Header a:hover {
-  text-decoration: underline;
-  transform: scale(1.1);
-}
+
 .revealUp {
   opacity: 0;     /* Ẩn ban đầu */
   transform: translateY(100px);  /* Dịch chuyển phần tử xuống */
@@ -73,7 +70,7 @@ button:hover{
   width:100% ;
 }
 #new_1 .col-4{
-  border: 1px solid white;
+  
   height: 500px;
   width: 400px;
   margin-left: 20px;

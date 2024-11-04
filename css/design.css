@@ -28,10 +28,7 @@ li {
     transition: .3s ease;
 }
 
-.Header a:hover {
-    text-decoration: underline;
-    transform: scale(1.1);
-}
+
 #main{
     margin-top: -100px;
 }
@@ -44,7 +41,7 @@ li {
     right: 0;
     bottom: 0;
     justify-content: center;
-    margin-top: 200px;
+    margin-top: -250px;
     text-shadow: 3px 3px rgba(41, 29, 29);
     opacity: 1;
     animation: anim 7s forwards;
@@ -65,7 +62,7 @@ li {
     border: 1px solid white;
     border-left: none;
     border-right: none;
-    background-image: -webkit-linear-gradient(rgb(117, 222, 117),rgb(225, 247, 224));
+    background-image: -webkit-linear-gradient(rgb(20, 77, 246),rgb(156, 176, 234));
 }
 
 #sec_2 .row .col-md-3 {
@@ -170,6 +167,69 @@ li {
 }
 
 #sec_6 .img-fluid {
+    margin-top: 10px;
+}
+
+#sec_7 .row .col-md-3 {
+    width: 250px;
+    border: 1px solid white;
+    margin: 20px 10px;
+}
+
+#sec_7 h6 {
+    color: white;
+    margin-top: 10px;
+    height: 60px;
+}
+
+#sec_7 h5 {
+    color: red;
+
+}
+
+#sec_7 .img-fluid {
+    margin-top: 10px;
+}
+
+
+#sec_8 .row .col-md-3 {
+    width: 250px;
+    border: 1px solid white;
+    margin: 20px 10px;
+}
+
+#sec_8 h6 {
+    color: white;
+    margin-top: 10px;
+    height: 60px;
+}
+
+#sec_8 h5 {
+    color: red;
+
+}
+
+#sec_8 .img-fluid {
+    margin-top: 10px;
+}
+#sec_9 .row .col-md-3 {
+    width: 250px;
+    border: 1px solid white;
+    margin: 20px 10px;
+}
+
+#sec_9 h6 {
+    color: white;
+    margin-top: 10px;
+    height: 60px;
+}
+
+#sec_9 h5 {
+    color: red;
+
+}
+
+#sec_9 .img-fluid {
     margin-top: 10px;
 }
 #price-range{
@@ -308,7 +368,7 @@ input[type="range"] {
     padding: 10px;
     transition: width 0.3s ease-in-out;
     width: 40px;
-    background-color: grey;
+    background-color: rgb(20, 77, 246);
     overflow: hidden;
     white-space: nowrap;
     border-radius: 5px;
@@ -340,7 +400,6 @@ input[type="range"] {
     width: 200px;
     /* Expand horizontally on hover */
 }
-
 .menu-item:hover .text {
     display: block;
     /* Show text on hover */
@@ -364,7 +423,7 @@ input[type="range"] {
     transition: text-decoration-color 300ms;
     position: relative;
     padding: 0.2em 0;
-
+    font-size: 15px;
 }
 
 .Footer a:hover::after,

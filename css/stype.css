@@ -54,12 +54,11 @@ body {
   border-radius: 50px;
   cursor: pointer;
   background-color: white;
-  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   font-size: 8px;
   transition: all 0.5s ease;
-  text-shadow: 2px 2px 2px hsl(261deg 80% 48%);
+ 
 }
 
 #Buy:hover {
@@ -86,14 +85,12 @@ body {
 }
 #Teme {
   box-shadow: -5px -5px 20px white;
-  margin-right: 50px;
+  border: none;
   padding: 20px 20px;
-  border: 1px solid white;
-  float: right;
-  padding-top: 50px;
   color: white;
   transition: transform ease-in-out 2s;
   border-radius: 20px;
+  font-size: 15px;
 }
 #Teme:hover{
   transform: scale(1.1);
@@ -119,15 +116,7 @@ body {
   width: 100%;
   
 }
-.Footer {
-  height: auto;
-  width: 100%;
-  background-image: -webkit-linear-gradient(rgb(56, 57, 57), rgb(0, 0, 0));
-  color: white;
-  clear: both;
-  font-size: 12px;
-  
-}
+
 
 li {
   list-style-type: none;
@@ -144,14 +133,21 @@ a {
 .btn:hover {
   background-color: rgb(93 24 220);
 }
-  
+.Footer {
+  height: auto;
+  width: 100%;
+  background-image: -webkit-linear-gradient(rgb(56, 57, 57), rgb(0, 0, 0));
+  color: white;
+  clear: both;
+  font-size: 12px;
+}  
 .Footer a {
   color: snow;
   text-decoration: none;
   transition: text-decoration-color 300ms;
   position: relative;
   padding: 0.2em 0;
-
+  font-size: 15px;
 }
 
 .Footer a:hover::after,
@@ -205,8 +201,8 @@ a {
   transition: .3s ease;
   border-radius: 5px;
   text-align: center;
-  padding-top: 70px;
-  font-size: 10px;
+  padding-top: 30px;
+  font-size: 15px;
 }
 
 .Option .img:hover .overlay {
@@ -514,4 +510,8 @@ input:checked + label .description {
 }
 .card[for="c10"] {
   background-image: url('../IMG/img_infomation/img_10.webp');
+}
+#testimonial-text, #testimonial-name {
+  transition: opacity 0.5s ease;
+  opacity: 0; /* Ban đầu đặt opacity về 0 */
 }

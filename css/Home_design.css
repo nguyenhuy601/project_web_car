@@ -44,11 +44,6 @@ li {
     transition: .3s ease;
 }
 
-.Header a:hover {
-    text-decoration: underline;
-    transform: scale(1.1);
-}
-
 .logo {
     display: flex;
     align-items: center;
@@ -135,15 +130,11 @@ li {
     width: 40px;
 }
 
-p {
+.container_x p {
     font-size: 14px;
     font-weight: 600;
     max-width: 400px;
     color: white;
-}
-
-.p {
-    padding: 2rem 0;
 }
 
 .section-one button {
@@ -299,18 +290,16 @@ button:hover {
 .menu li {
     width: 30%;
 }
-
+.footer-section{
+    margin-top: 200px;
+    height: 500px;
+}
 .Footer li {
     list-style-type: none;
 }
 
 .Footer a {
     text-decoration: none;
-}
-
-.footer-section {
-    height: auto;
-
 }
 
 .Footer {
@@ -320,26 +309,23 @@ button:hover {
     color: white;
     clear: both;
     font-size: 12px;
-
-
-}
-
-.Footer a {
+  }  
+  .Footer a {
     color: snow;
     text-decoration: none;
     transition: text-decoration-color 300ms;
     position: relative;
     padding: 0.2em 0;
-
-}
-
-.Footer a:hover::after,
-.Footer a:hover::after {
+    font-size: 15px;
+  }
+  
+  .Footer a:hover::after,
+  .Footer a:hover::after {
     opacity: 1;
     transform: translate3d(0, 0.2em, 0);
-}
-
-.Footer a::after {
+  }
+  
+  .Footer a::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -349,18 +335,18 @@ button:hover {
     background-color: rgb(255, 4, 4);
     opacity: 0;
     transition: opacity 300ms, transform 300ms;
-}
-
-.Footer li:nth-child(3) a::after {
+  }
+  
+  .Footer li:nth-child(3) a::after {
     opacity: 1;
     transform: scale(0);
     transform-origin: center;
-}
-
-.Footer li:nth-child(3) a:hover::after,
-.Footer li:nth-child(3) a:focus::after {
+  }
+  
+  .Footer li:nth-child(3) a:hover::after,
+  .Footer li:nth-child(3) a:focus::after {
     transform: scale(1);
-}
+  }
 
 .center {
     justify-self: center;

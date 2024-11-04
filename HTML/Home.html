@@ -23,23 +23,23 @@
                 </div>
                 <div class="col px-4">
                     <nav class="navbar navbar-expand-lg">
-                        <div class="container">
+                        <div class="container ">
                             <li>
-                                <a class="navbar-brand link-light link-opacity-25 link-opacity-100-hover "
+                                <a class="navbar-brand link-warning link-opacity-25 link-opacity-100-hover text-light"
                                     style="font-size: 16px;" href="../HTML/Home.html">Home</a>
                             </li>
                             <li>
-                                <a class="navbar-brand link-light link-opacity-25 link-opacity-100-hover "
+                                <a class="navbar-brand link-warning link-opacity-25 link-opacity-100-hover text-light"
                                     style="font-size: 16px;" href="../HTML/Home_design.html">Design</a>
                             </li>
-                            <li><a class="navbar-brand link-light link-opacity-25 link-opacity-100-hover"
+                            <li><a class="navbar-brand link-warning link-opacity-25 link-opacity-100-hover text-light"
                                     style="font-size: 16px;" href="../HTML/news.html">News</a>
                             </li>
-                            <li><a class="navbar-brand link-light link-opacity-25 link-opacity-100-hover"
+                            <li><a class="navbar-brand link-warning link-opacity-25 link-opacity-100-hover text-light"
                                     style="font-size: 16px;" href="../HTML/booking.html">Book</a>
                             </li>
                             <div class="dropdown">
-                                <button class="btn btn-light dropdown-toggle  " type="button" data-bs-toggle="dropdown"
+                                <button class="btn btn-light dropdown-toggle " type="button" data-bs-toggle="dropdown"
                                     style="font-size: 16px;" aria-expanded="false">
                                     Store
                                 </button>
@@ -62,24 +62,22 @@
                     <div id="user-menu" class="p-2">
                         <a href="../HTML/Login.html"><button type="button" id="sign-in-btn" class="btn btn-light">Sign in</button></a>
                         <div id="user-profile" style="display: none;">
-                            <img src="path/to/default-avatar.png" alt="Avatar" class="rounded-circle" width="40" height="40">
-                            <span>Tôi <i class="fa fa-caret-down"></i></span>
+                            <img src="../IMG/avatar.png" alt="Avatar" class="rounded-circle"  width="40" height="40" style="background-image: -webkit-linear-gradient(white,black);">
                             <div id="dropdown-menu" style="display: none;">
                                 <div class="profile-info">
-                                    <img src="path/to/default-avatar.png" alt="Avatar" class="rounded-circle" width="50" height="50">
-                                    <p>Huy Nguyễn</p>
-                                    <button>Xem hồ sơ</button>
+                                    <img src="../IMG/avatar.png" alt="Avatar" class="rounded-circle" width="50" height="50">
+                                    <p>USER</p>
+                                    <button class="btn btn-primary">Xem hồ sơ</button>
                                 </div>
                                 <hr>
                                 <ul>
-                                    <li>Dùng thử 1 tháng Premium</li>
-                                    <li>Cài đặt và quyền riêng tư</li>
-                                    <li>Trợ giúp</li>
-                                    <li>Ngôn ngữ</li>
-                                    <hr>
-                                    <li>Bài đăng và hoạt động</li>
-                                    <li>Tài khoản đăng tin tuyển dụng</li>
-                                    <li id="logout-btn">Đăng xuất</li>
+                                    <li class="link-primary link-opacity-25 link-opacity-100-hover text-light">Membership card</li>
+                                    <li class="link-primary link-opacity-25 link-opacity-100-hover text-light">Settings and privacy</li>
+                                    <li class="link-primary link-opacity-25 link-opacity-100-hover text-light">Help</li>
+                                    <li class="link-primary link-opacity-25 link-opacity-100-hover text-light">Language</li>
+                                    <li class="link-primary link-opacity-25 link-opacity-100-hover text-light">Contribute your opinion</li>
+                                    <hr>                                 
+                                    <li id="logout-btn" class="link-primary link-opacity-25 link-opacity-100-hover text-light">Sign out</li>
                                 </ul>
                             </div>
                         </div>
@@ -97,8 +95,7 @@
                         top: 50px;
                         right: 0;
                         width: 200px;
-                        background-color: white;
-                        border: 1px solid #ccc;
+                        background-image: -webkit-linear-gradient(white,black);
                         border-radius: 5px;
                         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
                         z-index: 1000;
@@ -136,7 +133,7 @@
 
     <section class="New justify-content-center align-items-center pt-5 revealUp">
         <div class="text-center text-light">
-            <h2>New</h2>
+            <h2>New vehicles In Store</h2>
         </div>
         <div class="slideshow-container">
             <!-- Full-width images with number and caption text -->
@@ -169,6 +166,7 @@
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
+            
         </div>
 
         <script>
@@ -207,42 +205,48 @@
             }
         </script>
     </section>
-    <section class="Topcar bg2 justify-content-center align-items-center pt-2 revealUp">
+    <section class="Topcar bg2 justify-content-center align-items-center container pt-2 revealUp">
         <div class="text-center text-light">
             <h2 style="height: 20vh;">Best Seller</h2>
         </div>
-        <img src="../IMG/img1.jpg">
-        <style>
-            .Topcar img {
-                border-radius: 20px;
-                box-shadow: -5px -5px 20px white;
-                margin-top: 50px;
-                margin-left: 100px;
-            }
-        </style>
-        <div id="Teme">
-            <h2 style="text-align: center;" class="text-warning">Temerario</h2>
-            <p>The Temerario is the best-selling car, bringing a fresh interpretation of<br>
-                Lamborghini's
-                philosophy of
-                "Feeling like a pilot". The cockpit provides<br> both the driver and passengers with a sense of
-                speed
-                and
-                new<br> experiences in the car, while also offering unprecedented comfort.
-                <hr>
-
-            </p>
-            <div class="text-start">
-
-                <p>
-                <h6>Max.Speed</h6> <span style="color: red;">300 Km/h</span></p>
-                <p>
-                <h6>Max Power(combined ICE+EE)</h6><span style="color: red;">920 CV</span></p>
-                <p>
-                <h6>0-100 km/h</h6><span style="color: red;">2.7s</span></p>
+        <div class="row">
+            <div class="col">
+                <img src="../IMG/img1.jpg">
+                <style>
+                    .Topcar img {
+                        border-radius: 20px;
+                        box-shadow: -5px -5px 20px white;
+                        margin-top: 50px;
+                        margin-right: 100px;
+                    }
+                </style>
             </div>
-            <div class="text-center">
-                <button id="Buy">Buy Now</button>
+            <div class="col">
+                <div id="Teme">
+                    <h2 style="text-align: center;" class="text-warning">Temerario</h2>
+                    <p>The Temerario is the best-selling car, bringing a fresh interpretation of<br>
+                        Lamborghini's
+                        philosophy of
+                        "Feeling like a pilot". The cockpit provides<br> both the driver and passengers with a sense of
+                        speed
+                        and
+                        new<br> experiences in the car, while also offering unprecedented comfort.
+                        <hr>
+        
+                    </p>
+                    <div class="text-start">
+        
+                        <p>
+                        <h6>Max.Speed</h6> <span style="color: red;">300 Km/h</span></p>
+                        <p>
+                        <h6>Max Power(combined ICE+EE)</h6><span style="color: red;">920 CV</span></p>
+                        <p>
+                        <h6>0-100 km/h</h6><span style="color: red;">2.7s</span></p>
+                    </div>
+                    <div class="text-center">
+                        <button id="Buy">Buy Now</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -250,7 +254,7 @@
 
     <section class="Option container justify-content-center align-items-center ">
         <div class=" text-light text-center ">
-            <h2 style="height: 20vh;">Best choice</h2>
+            <h2 style="height: 20vh;">Best Choice</h2>
         </div>
         <div class="row revealUp">
             <div class="col">
@@ -321,8 +325,8 @@
                                 ease: "power4.out",
                                 scrollTrigger: {
                                     trigger: ".text-end",
-                                    start: "top 90%",
-                                    end: "bottom 20%",
+                                    start: "top 50%",
+                                    end: "bottom 50%",
                                     toggleActions: "play reverse play reverse",
                                     scrub: true,
                                     onEnter: () => gsap.to(".text-end", { x: 0, opacity: 1 }),
@@ -336,18 +340,17 @@
     </section>
     <section class="News revealUp">
         <div class=" text-light text-center">
-            <h2>Information about vehicles</h2>
+            <h2>New vehicles In The World</h2>
         </div>
-
         <div class="wrapper ">
             <div class="container">
                 <input type="radio" name="slide" id="c1" checked>
                 <label for="c1" class="card">
-                    <div class="row">
+                    <div class="row ">
                         <div class="icon">1</div>
-                        <div class="description">
+                        <div class="description ">
                             <h4>Bugatti Chiron Super Sport 300+</h4>
-                            <p>Breaking the 490 km/h barrier - unmatched speed</p>
+                            <p class="text-light">Breaking the 490 km/h barrier - unmatched speed</p>
                         </div>
                     </div>
                 </label>
@@ -357,7 +360,7 @@
                         <div class="icon">2</div>
                         <div class="description">
                             <h4>Hennessey Venom F5</h4>
-                            <p>1817 horsepower, aiming for 500 km/h</p>
+                            <p class="text-light">1817 horsepower, aiming for 500 km/h</p>
                         </div>
                     </div>
                 </label>
@@ -367,7 +370,7 @@
                         <div class="icon">3</div>
                         <div class="description">
                             <h4>Lamborghini Aventador SVJ</h4>
-                            <p>V12 engine with 770 horsepower - aggressive power</p>
+                            <p class="text-light">V12 engine with 770 horsepower - aggressive power</p>
                         </div>
                     </div>
                 </label>
@@ -377,7 +380,7 @@
                         <div class="icon">4</div>
                         <div class="description">
                             <h4>Ferrari SF90 Stradale</h4>
-                            <p>Hybrid technology, 986 horsepower - innovation</p>
+                            <p class="text-light">Hybrid technology, 986 horsepower - innovation</p>
                         </div>
                     </div>
                 </label>
@@ -387,7 +390,7 @@
                         <div class="icon">5</div>
                         <div class="description">
                             <h4>McLaren Speedtail</h4>
-                            <p>Streamlined hypercar, 1035 horsepower</p>
+                            <p class="text-light">Streamlined hypercar, 1035 horsepower</p>
                         </div>
                     </div>
                 </label>
@@ -397,7 +400,7 @@
                         <div class="icon">6</div>
                         <div class="description">
                             <h4>SSC Tuatara</h4>
-                            <p>1750 horsepower, aiming for the fastest title</p>
+                            <p class="text-light">1750 horsepower, aiming for the fastest title</p>
                         </div>
                     </div>
                 </label>
@@ -407,7 +410,7 @@
                         <div class="icon">7</div>
                         <div class="description">
                             <h4>Mercedes-AMG One</h4>
-                            <p>F1-inspired, hybrid technology with 1000 horsepower</p>
+                            <p class="text-light">F1-inspired, hybrid technology with 1000 horsepower</p>
                         </div>
                     </div>
                 </label>
@@ -417,7 +420,7 @@
                         <div class="icon">8</div>
                         <div class="description">
                             <h4>McLaren Speedtail</h4>
-                            <p>Streamlined hypercar, 1035 horsepower</p>
+                            <p class="text-light">Streamlined hypercar, 1035 horsepower</p>
                         </div>
                     </div>
                 </label>
@@ -427,7 +430,7 @@
                         <div class="icon">9</div>
                         <div class="description">
                             <h4>Ferrari</h4>
-                            <p>1750 horsepower, aiming for the fastest title</p>
+                            <p class="text-light">1750 horsepower, aiming for the fastest title</p>
                         </div>
                     </div>
                 </label>
@@ -437,15 +440,15 @@
                         <div class="icon">10</div>
                         <div class="description">
                             <h4>Lamborghini</h4>
-                            <p>F1-inspired, hybrid technology with 1000 horsepower</p>
+                            <p class="text-light">F1-inspired, hybrid technology with 1000 horsepower</p>
                         </div>
                     </div>
                 </label>
             </div>
         </div>
     </section>
-    <section class="Design text-center">
-        <h6 class="text-primary mb-2">TESTIMONIALS</h6>
+    <section class="Design text-center container">
+        <h6 class="text-primary mb-2">Product Review</h6>
         <h1 class="fw-bold text-light">Customers love our car dealership website!</h1>
         <p id="testimonial-text" class="mt-3">Fantastic experience! The website made it so easy to compare different
             models and find exactly what I was looking for.</p>
@@ -511,59 +514,54 @@
                         name: "Emily T"
                     }
                 ];
-
+        
+                const extendedTestimonials = testimonials.concat(testimonials);
+        
                 const textElement = document.getElementById('testimonial-text');
                 const nameElement = document.getElementById('testimonial-name');
                 let slideIndex = 0;
                 const dots = document.getElementsByClassName("dot");
+        
 
-                // Function to display the current testimonial with fade effect
                 function showTestimonial(index) {
-                    // Clear the active dot class
                     for (let j = 0; j < dots.length; j++) {
                         dots[j].className = dots[j].className.replace(" active", "");
                     }
-
-                    // Add active class to the current dot
-                    dots[index].className += " active";
-
-                    // Fade out the text
+        
+                    dots[index % testimonials.length].className += " active";  
+        
                     textElement.style.opacity = 0;
                     nameElement.style.opacity = 0;
-
-                    // Wait for fade out to complete before updating the content
+        
                     setTimeout(() => {
-                        textElement.innerHTML = testimonials[index].text;
-                        nameElement.innerHTML = testimonials[index].name;
-
-                        // Fade the text back in
+                        textElement.innerHTML = extendedTestimonials[index].text;
+                        nameElement.innerHTML = extendedTestimonials[index].name;
+        
                         textElement.style.opacity = 1;
                         nameElement.style.opacity = 1;
-                    }, 500); // Time for fade-out effect
+                    }, 500);
                 }
-
-                // Function to automatically transition between testimonials
                 function showAutoSlide() {
+                    showTestimonial(slideIndex);
                     slideIndex++;
-                    if (slideIndex >= testimonials.length) {
+          
+                    if (slideIndex >= extendedTestimonials.length / 2) {
                         slideIndex = 0;
                     }
-                    showTestimonial(slideIndex);
-                    setTimeout(showAutoSlide, 3000); // Change testimonial every 4 seconds
-                }
-
-                // Start the auto-transition
+                    setTimeout(showAutoSlide, 3000); 
+                }     
                 showAutoSlide();
             });
         </script>
+        
     </section>
     <section class="Footer text-start ">
         <div class="container">
             <div class="row border border-light mt-5">
                 <div class="col-10">
                     <p>
-                    <h6>Kết nối với H&D
-                    </h6>Hãy giữ kết nối với chúng tôi để nâng tầm trải nghiệm dịch vụ hàng chính hãng</p>
+                    <h6>Connect with H&D
+                    </h6>Stay connected with us to enhance your genuine service experience</p>
                 </div>
                 <div class="col-2 align-content-center">
                     <button class="btn btn-outline-light">Order Now</button>
@@ -686,7 +684,7 @@
                 <div class="col-10">
                     <li><a href="">Contact :</a></li>
                 </div>
-                <div class="col-1">
+                <div class="col-2">
                     <a href="https://www.facebook.com/profile.php?id=100014803425379" class="icon me-2"><i
                             class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://myaccount.google.com/?gar=WzJd&hl=vi&utm_source=OGB&utm_medium=act"
@@ -699,15 +697,11 @@
             <br>
             <br>
             <div class="row-4">
-                <p style="font-size: 8px;">Giá bán lẻ đề xuất
-                    Là giá bán lẻ được đề xuất bởi Nhà sản xuất, đã bao gồm thuế nhập khẩu, thuế tiêu thụ đặc biệt và
-                    thuế
-                    giá trị gia tăng nhưng chưa bao gồm lệ phí đăng kiểm xe ô tô, lệ phí trước bạ, bảo hiểm trách nhiệm
-                    dân
-                    lẻ
-                    chính thức cho từng sản phẩm sẽ được quyết định theo chính sách bán hàng của Nhà phân phối, xin vui
-                    lòng
-                    liên hệ các Nhà phân phối chính hãng của H&D Việt Nam để cập nhật thông tin chi tiết.</p>
+                <p style="font-size: 12px;">Suggested retail price
+                    Is the retail price suggested by the Manufacturer, including import tax, special consumption tax and
+                    value-added tax but excluding vehicle registration fee, registration fee, official civil liability insurance
+                    for each product will be decided according to the sales policy of the Distributor, please
+                    contact the authorized Distributors of H&D Vietnam for detailed information.</p>
             </div>
         </div>
     </section>
@@ -755,8 +749,15 @@
         </div>
     </div>
     <style>
+        .hide-nav {
+            display: none;
+        }
+        .no-scroll {
+            overflow: hidden;
+        }
         .loading-page {
             position: fixed;
+            
             top: 0;
             left: 0;
             background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
@@ -856,7 +857,7 @@
                 opacity: 0,
                 display: "none",
                 duration: 1.5,
-                delay: 3.5,
+                delay: 2,
             }
         );
 
@@ -874,6 +875,34 @@
             }
         );
 
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        document.body.classList.add('no-scroll');
+        gsap.fromTo(
+            ".loading-page",
+            { opacity: 1 },
+            {
+                opacity: 0,
+                display: "none",
+                duration: 1.5,
+                delay: 2,
+                onComplete: function() {
+                    document.body.classList.remove('no-scroll');
+                }
+            }
+        );
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get the navigation bar element by its class or ID
+        const navBar = document.querySelector('.Header');
+    
+        // Hide the navigation bar when the page loads
+        navBar.classList.add('hide-nav');
+    
+        // Remove the hide-nav class when the loading page animation ends
+        setTimeout(() => {
+            navBar.classList.remove('hide-nav');
+        }, 3500); // Match this duration to your loading animation time
     });
     // Ẩn nút Sign In và hiển thị avatar khi đăng nhập thành công
     function updateUIAfterLogin(user) {
@@ -906,8 +935,6 @@
     
 </script>
 <script src="../boostrap/js/bootstrap.bundle.min.js"></script>
-<script src="../js/js.js"></script>
-<script src="../js/server.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"

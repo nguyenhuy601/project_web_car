@@ -17,7 +17,7 @@
     <div class="container" id="container">
         <div class="form-container sign-up">
             <form>
-                <h1>Create Account</h1>
+                <h1 class="text-center">Create Account</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
@@ -63,11 +63,26 @@
             </div>
         </div>
     </div>
-
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <p id="modalMessage"></p>
+        </div>
+    </div>
 
 </body>
 <script src="../js/js.js"></script>
 <script>
+    const container = document.getElementById('container');
+    const registerBtn = document.getElementById('register');
+    const loginBtn = document.getElementById('login');
+
+    registerBtn.addEventListener('click', () => {
+        container.classList.add("active");
+    });
+
+    loginBtn.addEventListener('click', () => {
+        container.classList.remove("active");
+    });
     const users = [
         { email: 'user1@example.com', password: 'password1' },
         { email: 'user2@example.com', password: 'password2' }
@@ -75,22 +90,38 @@
 
     document.getElementById('loginForm').addEventListener('submit', function (event) {
         event.preventDefault(); // Ngăn không cho form reload trang
-    
+
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
-    
+
         const user = users.find(user => user.email === email && user.password === password);
-    
+
+        function showModal(message) {
+            // Hiển thị thông điệp vào modal
+            document.getElementById('modalMessage').textContent = message;
+            
+            // Hiển thị modal
+            const modal = document.getElementById('loginModal');
+            modal.style.display = 'block';
+        
+            // Đóng modal khi người dùng nhấp ra ngoài modal
+            window.onclick = function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            };
+        }
+        
         if (user) {
-            alert('Đăng nhập thành công!');
+            showModal('Đăng nhập thành công!');
             localStorage.setItem('user', JSON.stringify(user)); // Lưu thông tin người dùng vào localStorage
-            window.location.href = 'Home.html'; // Chuyển hướng sau khi đăng nhập
+            setTimeout(() => window.location.href = 'Home.html', 2000); // Chuyển hướng sau khi đăng nhập
         } else {
-            alert('Email hoặc mật khẩu không chính xác.');
+            showModal('Email hoặc mật khẩu không chính xác.');
         }
     });
-    
-    
+
+
 </script>
 
 </html>
