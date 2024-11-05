@@ -10,21 +10,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/LichHen.css">
 </head>
-<script>
-    function ktradate(){
-        var date = document.getElementById("ngaySuaChua").value;
-        var cur = new Date();
-        var now = new Date(date);
-        var day = now - cur;
-        var finish = Math.ceil(day/(1000 *60*60*24));
-        if (finish > 1)
-        {
-            document.getElementById("helpdate").innerHTML ="*";
-        } else
-            document.getElementById("helpdate").innerHTML ="Ngay dat lich phai sau ngay hien tai";
-    }
-
-</script>
 
 <body>
     <section class="Header justify-content-center align-items-center">
@@ -83,7 +68,7 @@
             <h1>Đặt lịch</h1>
             <p class="text-center">Quý khách vui lòng điền vào mẫu dưới đây và gửi yêu cầu. Đại lý H&D Sài Gòn sẽ liên hệ với Quý khách trong vòng 24h để xác nhận ngày và thời gian sửa chữa.</p>
     
-            <form>
+            <form id="appointmentForm">
                 <!-- Vehicle Information Section -->
                 <h5><b>THÔNG TIN XE</b></h5>
     
@@ -152,6 +137,22 @@
             </form>
         </div>
     </section>
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel">Đặt Lịch Thành Công</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Cảm ơn quý khách đã đặt lịch hẹn! Chúng tôi sẽ liên hệ lại trong vòng 24h để xác nhận.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <section class="Footer text-start ">
         <div class="container">
             <div class="row border border-light mt-5">
@@ -305,4 +306,19 @@
     </section>
 </body>
 <script src="../boostrap/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+        var isValid = true; // You can add form validation here if needed
+
+        if (isValid) {
+            // Show the success modal
+            var successModal = new bootstrap.Modal(document.getElementById("successModal"));
+            successModal.show();
+
+            // Optionally, you can clear the form fields here
+            document.getElementById("appointmentForm").reset();
+        }
+    });
+</script>
 </html>
